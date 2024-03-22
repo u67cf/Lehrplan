@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1530"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "18D6DFC52BAA7A0B008DD13C"
+               BuildableName = "tku-ios.app"
+               BlueprintName = "tku-ios"
+               ReferencedContainer = "container:tku-ios.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "18D6DFC52BAA7A0B008DD13C"
+            BuildableName = "tku-ios.app"
+            BlueprintName = "tku-ios"
+            ReferencedContainer = "container:tku-ios.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "cookie"
+            value = "AMWEBJCT!%2FNEAI!JSESSIONID=9VY+918-8s2wB4D8iQz5N-Gt.005e3a16-04df-3bbd-9126-0e0c0b62c9a1; PD-H-SESSION-ID=1_4_1_20p0z1GOyME+zpwgEua09H6PaBPQG0y1-FuCJvPePEha+kwF; PD-ID=HfEgfHlPxpeNUV6RZxIcYX80BvuQsYoIBNLaqgIAxsPmhhx+pcwaY1JYg6780PjopkC2+ZW+1rk24Ks38vhHMlwnCxt2DpwrK17HkxZlX6pRwJo195g1GKeBnZ2yRaiKaw971FAzJlJrSU3GnIsURguJtXXjsgxDs2ZXot14U+LOBcytKwylb3Da/o//yOyEO8hv2oRUSz6w1nGju4VqrGeAf1PCgNi9QbzikCT7DrMm5zsMMyLjVaQQyTO7ezgjYWw8zfrY1p4mVAFubTwDvR03bsTQd+/wBPnAydvmn8uL74+ZGMhN142/w3RMsDaX; V_JCT=%2FNEAI"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "18D6DFC52BAA7A0B008DD13C"
+            BuildableName = "tku-ios.app"
+            BlueprintName = "tku-ios"
+            ReferencedContainer = "container:tku-ios.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

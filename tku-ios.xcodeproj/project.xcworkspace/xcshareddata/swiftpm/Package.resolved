@@ -1,0 +1,24 @@
+{
+  "originHash" : "5ea416f66b70f870acbe91ca32735223b980715a4d20f4d1c2b17b42eb081142",
+  "pins" : [
+    {
+      "identity" : "kanna",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tid-kijyun/Kanna.git",
+      "state" : {
+        "revision" : "41c3d28ea0eac07e4551b28def9de1ede702e739",
+        "version" : "5.3.0"
+      }
+    },
+    {
+      "identity" : "swift-dotenv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/thebarndog/swift-dotenv.git",
+      "state" : {
+        "revision" : "f6e7ca817d35eeccb20b62c87ee75963b01b29dc",
+        "version" : "2.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}
