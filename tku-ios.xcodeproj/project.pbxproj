@@ -10,6 +10,10 @@
 		1803313D2BAAD67A00A6BEE3 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803313C2BAAD67A00A6BEE3 /* SummaryView.swift */; };
 		1803313F2BAADA4200A6BEE3 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803313E2BAADA4200A6BEE3 /* BrowseView.swift */; };
 		180331422BAADD8F00A6BEE3 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180331412BAADD8F00A6BEE3 /* CalendarView.swift */; };
+		1819D5852BB01B780079B527 /* isLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5842BB01B780079B527 /* isLogin.swift */; };
+		1819D5872BB01DC90079B527 /* ClassTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5862BB01DC90079B527 /* ClassTimetable.swift */; };
+		1819D5892BB0217F0079B527 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5882BB0217F0079B527 /* LoginView.swift */; };
+		1819D58B2BB0222F0079B527 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D58A2BB0222F0079B527 /* AccountView.swift */; };
 		1875A0512BADD68800B3CD82 /* FetchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875A0502BADD68800B3CD82 /* FetchClass.swift */; };
 		1875A0532BADD6BD00B3CD82 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875A0522BADD6BD00B3CD82 /* WebView.swift */; };
 		1875A0552BADD71400B3CD82 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875A0542BADD71400B3CD82 /* Login.swift */; };
@@ -26,6 +30,10 @@
 		1803313C2BAAD67A00A6BEE3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		1803313E2BAADA4200A6BEE3 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		180331412BAADD8F00A6BEE3 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		1819D5842BB01B780079B527 /* isLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isLogin.swift; sourceTree = "<group>"; };
+		1819D5862BB01DC90079B527 /* ClassTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTimetable.swift; sourceTree = "<group>"; };
+		1819D5882BB0217F0079B527 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1819D58A2BB0222F0079B527 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		1875A0502BADD68800B3CD82 /* FetchClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchClass.swift; sourceTree = "<group>"; };
 		1875A0522BADD6BD00B3CD82 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		1875A0542BADD71400B3CD82 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -54,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				1875A0502BADD68800B3CD82 /* FetchClass.swift */,
+				1819D5842BB01B780079B527 /* isLogin.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -82,6 +91,8 @@
 				1803313E2BAADA4200A6BEE3 /* BrowseView.swift */,
 				1875A0522BADD6BD00B3CD82 /* WebView.swift */,
 				1875A0542BADD71400B3CD82 /* Login.swift */,
+				1819D5882BB0217F0079B527 /* LoginView.swift */,
+				1819D58A2BB0222F0079B527 /* AccountView.swift */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -90,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				18C8C3C12BAACA4700CB94E2 /* getClassSchedule.swift */,
+				1819D5862BB01DC90079B527 /* ClassTimetable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,13 +223,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C8C3C22BAACA4700CB94E2 /* getClassSchedule.swift in Sources */,
+				1819D5872BB01DC90079B527 /* ClassTimetable.swift in Sources */,
 				1875A0532BADD6BD00B3CD82 /* WebView.swift in Sources */,
 				1803313D2BAAD67A00A6BEE3 /* SummaryView.swift in Sources */,
 				180331422BAADD8F00A6BEE3 /* CalendarView.swift in Sources */,
 				1803313F2BAADA4200A6BEE3 /* BrowseView.swift in Sources */,
+				1819D5892BB0217F0079B527 /* LoginView.swift in Sources */,
 				18D6DFCC2BAA7A0B008DD13C /* ContentView.swift in Sources */,
 				1875A0552BADD71400B3CD82 /* Login.swift in Sources */,
+				1819D5852BB01B780079B527 /* isLogin.swift in Sources */,
 				18D6DFCA2BAA7A0B008DD13C /* tku_iosApp.swift in Sources */,
+				1819D58B2BB0222F0079B527 /* AccountView.swift in Sources */,
 				1875A0512BADD68800B3CD82 /* FetchClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

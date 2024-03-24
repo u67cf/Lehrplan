@@ -18,7 +18,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Browse", systemImage: "folder")
                 }
-            SummaryView()
+            AccountView()
                 .tabItem {
                     Label("Account", systemImage: "person.crop.circle.fill")
                 }
