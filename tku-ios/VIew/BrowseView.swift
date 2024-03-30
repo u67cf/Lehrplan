@@ -12,7 +12,7 @@ struct BrowseView: View {
         NavigationView {
             List {
                 
-                NavigationLink(destination: CalendarView()) {
+                NavigationLink(destination: ClassScheduleView()) {
                     Label(
                         title: { Text("課表") },
                         icon: { Image(systemName: "calendar.day.timeline.left")}
@@ -24,7 +24,7 @@ struct BrowseView: View {
                         icon: { Image(systemName: "calendar")}
                     )
                 }
-                NavigationLink(destination: CalendarView()) {
+                NavigationLink(destination: PassView()) {
                     Label(
                         title: { Text("圖書館") },
                         icon: { Image(systemName: "books.vertical.fill") }

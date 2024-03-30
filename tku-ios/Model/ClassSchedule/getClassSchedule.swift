@@ -3,26 +3,42 @@
 //  tku-ios
 //
 //
-
+import CoreData
 import Foundation
-import SwiftDotenv
+import Kanna
 
-import SwiftDotenv
-
-func getClassSchedle() {
-    var request = URLRequest(url: URL(string: "https://sso.tku.edu.tw/ePortfolio/ilifeStuClass.cshtml")!,timeoutInterval: Double.infinity)
-    request.addValue("", forHTTPHeaderField: "Cookie")
-
-    request.httpMethod = "GET"
-
-    let task = URLSession.shared.dataTask(with: request) { data, response, error in
-      guard let data = data else {
-        print(String(describing: error))
-        return
-      }
-      print(String(data: data, encoding: .utf8)!)
+func getClassSchedule(html: String){
+    if let doc = try?  Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
+        for num in stride(from: 0, to: 200, by: 1){
+            for name in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[1]/p[1]") {
+                print ("className", name.text!)
+            }
+            for timeString in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[1]/p[2]") {
+                print ("classtime", timeString.text!)
+            }
+            for classID in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[2]/p[1]") {
+                print ("classID", classID.text!)
+            }
+            for location in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[2]/p[2]/span[1]") {
+                print ("location", location.text!)
+            }
+            for teacher in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[2]/p[2]/span[2]") {
+                print ("teacher", teacher.text!)
+            }
+        }
     }
-
-    task.resume()
-
 }
+/*
+ name
+ time
+ number
+ location
+ teacher
+ */
+
+//                                         *
+// /html/body/div[2]/div[2]/table/tbody/tr[1]/td[1]/p[1]
+// /html/body/div[2]/div[2]/table/tbody/tr[1]/td[1]/p[2]
+// /html/body/div[2]/div[2]/table/tbody/tr[1]/td[2]/p[1]
+// /html/body/div[2]/div[2]/table/tbody/tr[1]/td[2]/p[2]/span[1]
+// /html/body/div[2]/div[2]/table/tbody/tr[1]/td[2]/p[2]/span[2]

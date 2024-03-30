@@ -11,7 +11,7 @@
 		1803313F2BAADA4200A6BEE3 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803313E2BAADA4200A6BEE3 /* BrowseView.swift */; };
 		180331422BAADD8F00A6BEE3 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180331412BAADD8F00A6BEE3 /* CalendarView.swift */; };
 		1819D5852BB01B780079B527 /* isLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5842BB01B780079B527 /* isLogin.swift */; };
-		1819D5872BB01DC90079B527 /* ClassTimetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5862BB01DC90079B527 /* ClassTimetable.swift */; };
+		1819D5872BB01DC90079B527 /* ClassData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5862BB01DC90079B527 /* ClassData.swift */; };
 		1819D5892BB0217F0079B527 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5882BB0217F0079B527 /* LoginView.swift */; };
 		1819D58B2BB0222F0079B527 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D58A2BB0222F0079B527 /* AccountView.swift */; };
 		18672EC52BB3BB4300762AC5 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18672EC42BB3BB4300762AC5 /* KeychainSwift */; };
@@ -19,13 +19,15 @@
 		1875A0512BADD68800B3CD82 /* FetchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875A0502BADD68800B3CD82 /* FetchClass.swift */; };
 		1875A0532BADD6BD00B3CD82 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875A0522BADD6BD00B3CD82 /* WebView.swift */; };
 		1875A0582BADD77500B3CD82 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 1875A0572BADD77500B3CD82 /* Kanna */; };
+		187675D12BB8051900053FB2 /* ClassScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187675D02BB8051900053FB2 /* ClassScheduleView.swift */; };
+		187675D42BB8127500053FB2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 187675D22BB8127500053FB2 /* Model.xcdatamodeld */; };
+		1895DCF92BB820E400A559E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895DCF82BB820E400A559E0 /* Date+Extensions.swift */; };
+		1895DCFB2BB8236D00A559E0 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895DCFA2BB8236D00A559E0 /* View+Extensions.swift */; };
 		18C8C3C22BAACA4700CB94E2 /* getClassSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8C3C12BAACA4700CB94E2 /* getClassSchedule.swift */; };
-		18C8C3C52BAACBD500CB94E2 /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = 18C8C3C42BAACBD500CB94E2 /* SwiftDotenv */; };
 		18D6DFCA2BAA7A0B008DD13C /* tku_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6DFC92BAA7A0B008DD13C /* tku_iosApp.swift */; };
 		18D6DFCC2BAA7A0B008DD13C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6DFCB2BAA7A0B008DD13C /* ContentView.swift */; };
 		18D6DFCE2BAA7A0D008DD13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D6DFCD2BAA7A0D008DD13C /* Assets.xcassets */; };
 		18D6DFD12BAA7A0D008DD13C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D6DFD02BAA7A0D008DD13C /* Preview Assets.xcassets */; };
-		18DA23B42BB414B400177287 /* FetchCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA23B32BB414B400177287 /* FetchCalendar.swift */; };
 		18DA23B72BB41B4E00177287 /* LessonRightNow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA23B62BB41B4E00177287 /* LessonRightNow.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,19 +36,22 @@
 		1803313E2BAADA4200A6BEE3 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		180331412BAADD8F00A6BEE3 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		1819D5842BB01B780079B527 /* isLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isLogin.swift; sourceTree = "<group>"; };
-		1819D5862BB01DC90079B527 /* ClassTimetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTimetable.swift; sourceTree = "<group>"; };
+		1819D5862BB01DC90079B527 /* ClassData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassData.swift; sourceTree = "<group>"; };
 		1819D5882BB0217F0079B527 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1819D58A2BB0222F0079B527 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		18672EC72BB3E07900762AC5 /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
 		1875A0502BADD68800B3CD82 /* FetchClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchClass.swift; sourceTree = "<group>"; };
 		1875A0522BADD6BD00B3CD82 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		187675D02BB8051900053FB2 /* ClassScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleView.swift; sourceTree = "<group>"; };
+		187675D32BB8127500053FB2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		1895DCF82BB820E400A559E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		1895DCFA2BB8236D00A559E0 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		18C8C3C12BAACA4700CB94E2 /* getClassSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getClassSchedule.swift; sourceTree = "<group>"; };
 		18D6DFC62BAA7A0B008DD13C /* tku-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tku-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D6DFC92BAA7A0B008DD13C /* tku_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tku_iosApp.swift; sourceTree = "<group>"; };
 		18D6DFCB2BAA7A0B008DD13C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18D6DFCD2BAA7A0D008DD13C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18D6DFD02BAA7A0D008DD13C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		18DA23B32BB414B400177287 /* FetchCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCalendar.swift; sourceTree = "<group>"; };
 		18DA23B62BB41B4E00177287 /* LessonRightNow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonRightNow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +62,6 @@
 			files = (
 				18672EC52BB3BB4300762AC5 /* KeychainSwift in Frameworks */,
 				1875A0582BADD77500B3CD82 /* Kanna in Frameworks */,
-				18C8C3C52BAACBD500CB94E2 /* SwiftDotenv in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +73,6 @@
 			children = (
 				1875A0502BADD68800B3CD82 /* FetchClass.swift */,
 				1819D5842BB01B780079B527 /* isLogin.swift */,
-				18DA23B32BB414B400177287 /* FetchCalendar.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -86,6 +89,7 @@
 		180331432BAAE11500A6BEE3 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				187675D02BB8051900053FB2 /* ClassScheduleView.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -110,9 +114,18 @@
 			isa = PBXGroup;
 			children = (
 				18C8C3C12BAACA4700CB94E2 /* getClassSchedule.swift */,
-				1819D5862BB01DC90079B527 /* ClassTimetable.swift */,
+				1819D5862BB01DC90079B527 /* ClassData.swift */,
 			);
 			path = ClassSchedule;
+			sourceTree = "<group>";
+		};
+		1895DCF72BB820C000A559E0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1895DCF82BB820E400A559E0 /* Date+Extensions.swift */,
+				1895DCFA2BB8236D00A559E0 /* View+Extensions.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		18C8C3BD2BAAC92800CB94E2 /* VIew */ = {
@@ -140,6 +153,7 @@
 		18D6DFBD2BAA7A0B008DD13C = {
 			isa = PBXGroup;
 			children = (
+				187675D22BB8127500053FB2 /* Model.xcdatamodeld */,
 				18D6DFC82BAA7A0B008DD13C /* tku-ios */,
 				18D6DFC72BAA7A0B008DD13C /* Products */,
 			);
@@ -156,6 +170,7 @@
 		18D6DFC82BAA7A0B008DD13C /* tku-ios */ = {
 			isa = PBXGroup;
 			children = (
+				1895DCF72BB820C000A559E0 /* Helper */,
 				1803313B2BAAD33700A6BEE3 /* ViewModel */,
 				18C8C3C02BAACA0F00CB94E2 /* Model */,
 				18C8C3BD2BAAC92800CB94E2 /* VIew */,
@@ -209,7 +224,6 @@
 			);
 			name = "tku-ios";
 			packageProductDependencies = (
-				18C8C3C42BAACBD500CB94E2 /* SwiftDotenv */,
 				1875A0572BADD77500B3CD82 /* Kanna */,
 				18672EC42BB3BB4300762AC5 /* KeychainSwift */,
 			);
@@ -242,7 +256,6 @@
 			);
 			mainGroup = 18D6DFBD2BAA7A0B008DD13C;
 			packageReferences = (
-				18C8C3C32BAACBD500CB94E2 /* XCRemoteSwiftPackageReference "swift-dotenv" */,
 				1875A0562BADD77500B3CD82 /* XCRemoteSwiftPackageReference "Kanna" */,
 				18672EC32BB3BB4300762AC5 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
@@ -272,14 +285,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187675D12BB8051900053FB2 /* ClassScheduleView.swift in Sources */,
 				18C8C3C22BAACA4700CB94E2 /* getClassSchedule.swift in Sources */,
 				18672EC82BB3E07900762AC5 /* PassView.swift in Sources */,
-				1819D5872BB01DC90079B527 /* ClassTimetable.swift in Sources */,
+				1819D5872BB01DC90079B527 /* ClassData.swift in Sources */,
 				1875A0532BADD6BD00B3CD82 /* WebView.swift in Sources */,
-				18DA23B42BB414B400177287 /* FetchCalendar.swift in Sources */,
 				1803313D2BAAD67A00A6BEE3 /* SummaryView.swift in Sources */,
 				18DA23B72BB41B4E00177287 /* LessonRightNow.swift in Sources */,
+				187675D42BB8127500053FB2 /* Model.xcdatamodeld in Sources */,
+				1895DCF92BB820E400A559E0 /* Date+Extensions.swift in Sources */,
 				180331422BAADD8F00A6BEE3 /* CalendarView.swift in Sources */,
+				1895DCFB2BB8236D00A559E0 /* View+Extensions.swift in Sources */,
 				1803313F2BAADA4200A6BEE3 /* BrowseView.swift in Sources */,
 				1819D5892BB0217F0079B527 /* LoginView.swift in Sources */,
 				18D6DFCC2BAA7A0B008DD13C /* ContentView.swift in Sources */,
@@ -510,14 +526,6 @@
 				minimumVersion = 5.3.0;
 			};
 		};
-		18C8C3C32BAACBD500CB94E2 /* XCRemoteSwiftPackageReference "swift-dotenv" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/thebarndog/swift-dotenv.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -531,12 +539,21 @@
 			package = 1875A0562BADD77500B3CD82 /* XCRemoteSwiftPackageReference "Kanna" */;
 			productName = Kanna;
 		};
-		18C8C3C42BAACBD500CB94E2 /* SwiftDotenv */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18C8C3C32BAACBD500CB94E2 /* XCRemoteSwiftPackageReference "swift-dotenv" */;
-			productName = SwiftDotenv;
-		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		187675D22BB8127500053FB2 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				187675D32BB8127500053FB2 /* Model.xcdatamodel */,
+			);
+			currentVersion = 187675D32BB8127500053FB2 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = "/Users/bochain/Developer/tku-ios/Model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18D6DFBE2BAA7A0B008DD13C /* Project object */;
 }

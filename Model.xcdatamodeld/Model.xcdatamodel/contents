@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="ClassInfo" representedClassName="ClassInfo" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="classid" optional="YES" attributeType="String"/>
+        <attribute name="classlocation" optional="YES" attributeType="String"/>
+        <attribute name="classname" optional="YES" attributeType="String"/>
+        <attribute name="classteacher" optional="YES" attributeType="String"/>
+        <attribute name="classtime" optional="YES" attributeType="String"/>
+    </entity>
+</model>
