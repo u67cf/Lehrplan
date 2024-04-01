@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SummaryView: View {
+    @Query private var  ClassSchedule: [ClassData]
+    @Environment(\.modelContext) private var modelContext
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        LessonRightNow(lessonData: ClassSchedule[0])
     }
 }
 

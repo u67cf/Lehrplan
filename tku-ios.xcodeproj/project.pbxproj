@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180320072BBB062800898B7E /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180320062BBB062800898B7E /* PreviewSampleData.swift */; };
 		1803313D2BAAD67A00A6BEE3 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803313C2BAAD67A00A6BEE3 /* SummaryView.swift */; };
 		1803313F2BAADA4200A6BEE3 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803313E2BAADA4200A6BEE3 /* BrowseView.swift */; };
 		180331422BAADD8F00A6BEE3 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180331412BAADD8F00A6BEE3 /* CalendarView.swift */; };
@@ -20,7 +21,7 @@
 		1875A0532BADD6BD00B3CD82 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875A0522BADD6BD00B3CD82 /* WebView.swift */; };
 		1875A0582BADD77500B3CD82 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = 1875A0572BADD77500B3CD82 /* Kanna */; };
 		187675D12BB8051900053FB2 /* ClassScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187675D02BB8051900053FB2 /* ClassScheduleView.swift */; };
-		187675D42BB8127500053FB2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 187675D22BB8127500053FB2 /* Model.xcdatamodeld */; };
+		188E1E922BB9A9C000E32D12 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E1E912BB9A9C000E32D12 /* SampleDeck.swift */; };
 		1895DCF92BB820E400A559E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895DCF82BB820E400A559E0 /* Date+Extensions.swift */; };
 		1895DCFB2BB8236D00A559E0 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895DCFA2BB8236D00A559E0 /* View+Extensions.swift */; };
 		18C8C3C22BAACA4700CB94E2 /* getClassSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8C3C12BAACA4700CB94E2 /* getClassSchedule.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180320062BBB062800898B7E /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
 		1803313C2BAAD67A00A6BEE3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		1803313E2BAADA4200A6BEE3 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		180331412BAADD8F00A6BEE3 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -43,7 +45,7 @@
 		1875A0502BADD68800B3CD82 /* FetchClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchClass.swift; sourceTree = "<group>"; };
 		1875A0522BADD6BD00B3CD82 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		187675D02BB8051900053FB2 /* ClassScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleView.swift; sourceTree = "<group>"; };
-		187675D32BB8127500053FB2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		188E1E912BB9A9C000E32D12 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
 		1895DCF82BB820E400A559E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		1895DCFA2BB8236D00A559E0 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		18C8C3C12BAACA4700CB94E2 /* getClassSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getClassSchedule.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				1895DCF82BB820E400A559E0 /* Date+Extensions.swift */,
 				1895DCFA2BB8236D00A559E0 /* View+Extensions.swift */,
+				180320062BBB062800898B7E /* PreviewSampleData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				18672ECA2BB3E70F00762AC5 /* ClassSchedule */,
+				188E1E912BB9A9C000E32D12 /* SampleDeck.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,7 +157,6 @@
 		18D6DFBD2BAA7A0B008DD13C = {
 			isa = PBXGroup;
 			children = (
-				187675D22BB8127500053FB2 /* Model.xcdatamodeld */,
 				18D6DFC82BAA7A0B008DD13C /* tku-ios */,
 				18D6DFC72BAA7A0B008DD13C /* Products */,
 			);
@@ -291,14 +294,15 @@
 				1819D5872BB01DC90079B527 /* ClassData.swift in Sources */,
 				1875A0532BADD6BD00B3CD82 /* WebView.swift in Sources */,
 				1803313D2BAAD67A00A6BEE3 /* SummaryView.swift in Sources */,
+				188E1E922BB9A9C000E32D12 /* SampleDeck.swift in Sources */,
 				18DA23B72BB41B4E00177287 /* LessonRightNow.swift in Sources */,
-				187675D42BB8127500053FB2 /* Model.xcdatamodeld in Sources */,
 				1895DCF92BB820E400A559E0 /* Date+Extensions.swift in Sources */,
 				180331422BAADD8F00A6BEE3 /* CalendarView.swift in Sources */,
 				1895DCFB2BB8236D00A559E0 /* View+Extensions.swift in Sources */,
 				1803313F2BAADA4200A6BEE3 /* BrowseView.swift in Sources */,
 				1819D5892BB0217F0079B527 /* LoginView.swift in Sources */,
 				18D6DFCC2BAA7A0B008DD13C /* ContentView.swift in Sources */,
+				180320072BBB062800898B7E /* PreviewSampleData.swift in Sources */,
 				1819D5852BB01B780079B527 /* isLogin.swift in Sources */,
 				18D6DFCA2BAA7A0B008DD13C /* tku_iosApp.swift in Sources */,
 				1819D58B2BB0222F0079B527 /* AccountView.swift in Sources */,
@@ -540,20 +544,6 @@
 			productName = Kanna;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		187675D22BB8127500053FB2 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				187675D32BB8127500053FB2 /* Model.xcdatamodel */,
-			);
-			currentVersion = 187675D32BB8127500053FB2 /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = "/Users/bochain/Developer/tku-ios/Model.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 18D6DFBE2BAA7A0B008DD13C /* Project object */;
 }

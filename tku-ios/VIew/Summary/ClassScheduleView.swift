@@ -6,20 +6,22 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ClassScheduleView: View {
+    @Query private var  ClassSchedule: [ClassData]
     @State private var currentDate : Date = .init()
-    @State private var sampleData = SampleData
+    @Environment(\.modelContext) private var modelContext
+    //@State private var sampleData = SampleData
     var body: some View {
-        VStack {
-            HeaderView()
-            ScrollView {
-                ForEach(sampleData) { classInfo in
-                    LessonRightNow(lessonData: classInfo)
-                        .padding(.horizontal)
-                    
-                }
+        ScrollView (.vertical, showsIndicators: false){
+            ForEach(ClassSchedule) { classInfo in
+                LessonRightNow(lessonData: classInfo)
+                    .padding(.horizontal)
             }
+        }
+        .safeAreaInset(edge: .top, spacing: 0) {
+            HeaderView()
         }
         .vSpacing(.top)
     }
@@ -37,7 +39,7 @@ struct ClassScheduleView: View {
                 .textScale(.secondary)
                 .foregroundStyle(.gray)
         }
-        .padding(15)
+        .padding(.init(top: -50, leading: 15, bottom: 15, trailing: 15))
         .hSpacing(.leading)
     }
 }

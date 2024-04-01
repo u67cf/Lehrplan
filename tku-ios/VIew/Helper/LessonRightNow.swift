@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUI
 
 struct LessonRightNow: View {
-    var lessonData: ClassData  // Renamed for clarity
+    var lessonData: ClassData
     
     var body: some View {
         HStack (){

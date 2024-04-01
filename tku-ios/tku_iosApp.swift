@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct tku_iosApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(previewContainer)
         }
     }
 }

@@ -6,29 +6,31 @@
 //
 
 import SwiftUI
+import SwiftData
 
-
-struct ClassData: Identifiable{
-    let id: UUID = .init()
-    let weekday: String
-    let classNumber : String
-    let startTime : String
-    let EndTime: String
-    let name : String
-    let number : String
-    let location: String
-    let teacher : String
+@Model
+class ClassData {
+    var weekday: String
+    var classNumber : String
+    var startTime : String
+    var EndTime: String
+    var name : String
+    var number : String
+    var location: String
+    var teacher : String
+    
+    init(weekday: String, classNumber: String, startTime: String, EndTime: String, name: String, number: String, location: String, teacher: String) {
+        self.weekday = weekday
+        self.classNumber = classNumber
+        self.startTime = startTime
+        self.EndTime = EndTime
+        self.name = name
+        self.number = number
+        self.location = location
+        self.teacher = teacher
+    }
 }
 
-/*
- id = UUID
- time = "8:50 - 9:00"
- name = "system and signal"
- number = "50"
- location = "E503"
- teacher = "Mr CHen"
- weekday = "(一)"
- */
 let SampleData : [ClassData] = [
     .init(weekday: "五", classNumber: "1", startTime: "8:10", EndTime: "9:00", name: "電子學", number: "069", location: "E503", teacher: "助教"),
     .init(weekday: "五", classNumber: "2", startTime: "9:10", EndTime: "9:00", name: "電子學", number: "069", location: "E503", teacher: "助教"),
