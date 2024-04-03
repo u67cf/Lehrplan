@@ -4,7 +4,7 @@ import KeychainSwift
 
 struct LoginView: View {
     @State private var cookies: [HTTPCookie] = []
-    @State private var showLoginPage : Bool = false // Renamed for Swift naming convention
+    @State private var showLoginPage : Bool = true // Renamed for Swift naming convention
     private let url = "https://sso.tku.edu.tw/ilife/CoWork/AndroidSsoLogin.cshtml" // URL as a string constant
     //private let keychain = KeychainSwift()
     
@@ -41,6 +41,7 @@ struct LoginView: View {
             Button("Fetch Cookies") {
                 // This will show the login page
                 getWebsiteCookies()
+                fetchData()
                 self.showLoginPage = false
             }
         }
@@ -98,9 +99,17 @@ struct LoginView: View {
 
     
     func fetchData() {
-        guard let url = URL(string: "https://sso.tku.edu.tw/ePortfolio/ilifeStuClass.cshtml") else { return } // Use the current URL
-        makeAuthenticatedRequest(url: url, cookies: cookies) // Use the current cookies
         test()
+        guard let url = URL(string: "https://sso.tku.edu.tw/ePortfolio/ilifeStuClass.cshtml") else { return } // get class schedule
+        makeAuthenticatedRequest(url: url, cookies: cookies) { htmlData in
+            getClassSchedule(html: htmlData)
+        }
+        print("id")
+        guard let url = URL(string: "https://sso.tku.edu.tw/ilife/CoWork/AndroidSsoLogin.cshtml") else { return } // get student id
+        makeAuthenticatedRequest(url: url, cookies: cookies) { htmlData in
+            getStudentID(html: htmlData)
+        }
+        print("id->")
     }
     
     func test() {

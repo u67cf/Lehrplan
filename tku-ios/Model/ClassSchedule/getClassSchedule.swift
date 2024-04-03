@@ -3,7 +3,6 @@
 //  tku-ios
 //
 //
-import CoreData
 import Foundation
 import Kanna
 

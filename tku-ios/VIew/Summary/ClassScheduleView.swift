@@ -39,12 +39,13 @@ struct ClassScheduleView: View {
                 .textScale(.secondary)
                 .foregroundStyle(.gray)
         }
-        .padding(.init(top: -50, leading: 15, bottom: 15, trailing: 15))
+        .padding(.init(top: 0, leading: 15, bottom: 15, trailing: 15))
         .hSpacing(.leading)
     }
 }
 
 #Preview {
     ClassScheduleView()
+        .modelContainer(previewContainer)
         
 }

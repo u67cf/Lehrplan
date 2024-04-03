@@ -6,28 +6,29 @@
 //
 
 import Foundation
-import Kanna
 
-// Now we pass 'cookies' as a parameter to the function
-func makeAuthenticatedRequest(url: URL, cookies: [HTTPCookie]) {
+// Updated to include a completion handler that passes HTML data as a String
+func makeAuthenticatedRequest(url: URL, cookies: [HTTPCookie], completion: @escaping (String) -> Void) {
     var request = URLRequest(url: url)
     
-    // Create a cookie header string from the retrieved cookies
+    // Create and set the cookie header
     let cookieHeader = HTTPCookie.requestHeaderFields(with: cookies)["Cookie"]
-    // Set the cookie header in your request
     request.setValue(cookieHeader, forHTTPHeaderField: "Cookie")
-
-    // Now you can use this request for URLSession tasks, Alamofire requests, etc.
+    
     URLSession.shared.dataTask(with: request) { data, response, error in
-        // Handle the HTTP response here
-        if let data = data {
-            // Process the data
-            print(String(data: data, encoding: .utf8) ?? "No data")
-            getClassSchedule(html: String(data: data, encoding: .utf8) ?? "")
-            print("finish")
-        } else if let error = error {
-            // Handle the error
+        // Check for errors
+        if let error = error {
             print("HTTP Request Failed \(error)")
+            return
+        }
+        
+        // Process and pass the data to the completion handler
+        if let data = data, let htmlData = String(data: data, encoding: .utf8) {
+            completion(htmlData)
+        } else {
+            print("No data received")
+            completion("")
         }
     }.resume()
 }
+

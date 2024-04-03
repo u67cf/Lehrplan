@@ -15,6 +15,7 @@
 		1819D5872BB01DC90079B527 /* ClassData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5862BB01DC90079B527 /* ClassData.swift */; };
 		1819D5892BB0217F0079B527 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D5882BB0217F0079B527 /* LoginView.swift */; };
 		1819D58B2BB0222F0079B527 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819D58A2BB0222F0079B527 /* AccountView.swift */; };
+		18280DF32BBD2B76006A5B95 /* getStudentID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18280DF22BBD2B75006A5B95 /* getStudentID.swift */; };
 		18672EC52BB3BB4300762AC5 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18672EC42BB3BB4300762AC5 /* KeychainSwift */; };
 		18672EC82BB3E07900762AC5 /* PassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18672EC72BB3E07900762AC5 /* PassView.swift */; };
 		1875A0512BADD68800B3CD82 /* FetchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875A0502BADD68800B3CD82 /* FetchClass.swift */; };
@@ -41,6 +42,7 @@
 		1819D5862BB01DC90079B527 /* ClassData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassData.swift; sourceTree = "<group>"; };
 		1819D5882BB0217F0079B527 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1819D58A2BB0222F0079B527 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		18280DF22BBD2B75006A5B95 /* getStudentID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStudentID.swift; sourceTree = "<group>"; };
 		18672EC72BB3E07900762AC5 /* PassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassView.swift; sourceTree = "<group>"; };
 		1875A0502BADD68800B3CD82 /* FetchClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchClass.swift; sourceTree = "<group>"; };
 		1875A0522BADD6BD00B3CD82 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				18672ECA2BB3E70F00762AC5 /* ClassSchedule */,
 				188E1E912BB9A9C000E32D12 /* SampleDeck.swift */,
+				18280DF22BBD2B75006A5B95 /* getStudentID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				188E1E922BB9A9C000E32D12 /* SampleDeck.swift in Sources */,
 				18DA23B72BB41B4E00177287 /* LessonRightNow.swift in Sources */,
 				1895DCF92BB820E400A559E0 /* Date+Extensions.swift in Sources */,
+				18280DF32BBD2B76006A5B95 /* getStudentID.swift in Sources */,
 				180331422BAADD8F00A6BEE3 /* CalendarView.swift in Sources */,
 				1895DCFB2BB8236D00A559E0 /* View+Extensions.swift in Sources */,
 				1803313F2BAADA4200A6BEE3 /* BrowseView.swift in Sources */,
