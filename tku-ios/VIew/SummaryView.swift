@@ -19,6 +19,7 @@ struct SummaryView: View {
             HeaderView()
         }
         .vSpacing(.top)
+        .padding()
     }
     
     @ViewBuilder

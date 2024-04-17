@@ -84,6 +84,7 @@
 		180331402BAADC9000A6BEE3 /* browse */ = {
 			isa = PBXGroup;
 			children = (
+				18BD4A222BCFB02100A5A46A /* Schedule */,
 				18672EC92BB3E40800762AC5 /* Calendar */,
 				18672EC62BB3E04300762AC5 /* Library */,
 			);
@@ -93,7 +94,6 @@
 		180331432BAAE11500A6BEE3 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
-				187675D02BB8051900053FB2 /* ClassScheduleView.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -131,6 +131,14 @@
 				180320062BBB062800898B7E /* PreviewSampleData.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		18BD4A222BCFB02100A5A46A /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				187675D02BB8051900053FB2 /* ClassScheduleView.swift */,
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		18C8C3BD2BAAC92800CB94E2 /* VIew */ = {

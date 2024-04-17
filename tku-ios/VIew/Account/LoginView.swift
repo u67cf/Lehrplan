@@ -1,8 +1,12 @@
 import SwiftUI
 import WebKit
 import KeychainSwift
+import SwiftData
 
 struct LoginView: View {
+    @Environment(\.modelContext) private var context
+    @Environment(\.dismiss) private var dimiss
+    @Query private var  ClassSchedule: [ClassData]
     @State private var cookies: [HTTPCookie] = []
     @State private var showLoginPage : Bool = true // Renamed for Swift naming convention
     private let url = "https://sso.tku.edu.tw/ilife/CoWork/AndroidSsoLogin.cshtml" // URL as a string constant
@@ -42,6 +46,7 @@ struct LoginView: View {
                 // This will show the login page
                 getWebsiteCookies()
                 fetchData()
+                
                 self.showLoginPage = false
             }
         }
@@ -102,9 +107,9 @@ struct LoginView: View {
         test()
         guard let url = URL(string: "https://sso.tku.edu.tw/ePortfolio/ilifeStuClass.cshtml") else { return } // get class schedule
         makeAuthenticatedRequest(url: url, cookies: cookies) { htmlData in
-            getClassSchedule(html: htmlData)
+            getClassSchedule(html: htmlData, modelContext: context)
         }
-        print("id")
+        
         guard let url = URL(string: "https://sso.tku.edu.tw/ilife/CoWork/AndroidSsoLogin.cshtml") else { return } // get student id
         makeAuthenticatedRequest(url: url, cookies: cookies) { htmlData in
             getStudentID(html: htmlData)

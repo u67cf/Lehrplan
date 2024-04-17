@@ -44,19 +44,7 @@ struct LessonRightNow: View {
 
 struct LessonRightNow_Previews: PreviewProvider {
     static var previews: some View {
-        // Create a sample instance of ClassData
-        let sample = ClassData(
-            weekday: "五",
-            classNumber: "2",
-            startTime: "8:10",
-            EndTime: "9:00",
-            name: "電子學",
-            number: "053",
-            location: "E503",
-            teacher: "助教"
-        )
-        
-        // Pass the sample instance to your LessonRightNow view
-        LessonRightNow(lessonData: sample)
+        ClassScheduleView()
+            .modelContainer(previewContainer)
     }
 }

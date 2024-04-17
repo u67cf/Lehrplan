@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ClassScheduleView: View {
-    @Query private var  ClassSchedule: [ClassData]
+    @Query(filter: #Predicate<ClassData> { $0.weekday == "五" }, animation: .snappy) private var  ClassSchedule: [ClassData]
     @State private var currentDate : Date = .init()
     @Environment(\.modelContext) private var modelContext
     //@State private var sampleData = SampleData
