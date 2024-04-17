@@ -14,14 +14,34 @@ func getStudentID(html: String){
             if let extractedText = id.text {
                 print("Extracted Text:", extractedText)
                 // Save the extracted text to UserDefaults
-                UserDefaults.standard.set(extractedText, forKey: "studentID")
-                
-                let currentTime = Date()
-                UserDefaults.standard.set(currentTime, forKey: "lastUpdateTime")
-                            
-                // Confirmation of save operation
-                print(UserDefaults.standard.object(forKey: "studentID") ?? "can't save id")
+                if let number = extractNumber(from: extractedText) {
+                    UserDefaults.standard.set(number, forKey: "studentID")
+                    print(UserDefaults.standard.object(forKey: "studentID") ?? "can't save id")
+                    let currentTime = Date()
+                    UserDefaults.standard.set(currentTime, forKey: "lastUpdateTime")
+                } else {
+                    print("No number found in the string.")
+                }
             }
         }
     }
+}
+
+func extractNumber(from string: String) -> String? {
+    let pattern = "\\d+"
+    
+    do {
+        let regex = try NSRegularExpression(pattern: pattern)
+        let results = regex.matches(in: string, range: NSRange(string.startIndex..., in: string))
+        
+        // Assuming you want the first match only.
+        if let match = results.first {
+            let range = Range(match.range, in: string)
+            return String(string[range!])
+        }
+    } catch let error {
+        print("Invalid regex: \(error.localizedDescription)")
+    }
+    
+    return nil
 }
