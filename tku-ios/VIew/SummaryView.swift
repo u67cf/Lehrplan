@@ -9,17 +9,38 @@ import SwiftUI
 import SwiftData
 
 struct SummaryView: View {
-    @Query private var  ClassSchedule: [ClassData]
+    @Query(filter: predicate(), animation: .snappy) private var  ClassSchedule: [ClassData]
     @Environment(\.modelContext) private var modelContext
+    
+    static func predicate() -> Predicate<ClassData> {
+        let today = Date()
+        let calendar = Calendar.current
+        let weekday = calendar.component(.weekday, from: today)
+        
+        // Map weekday numbers to Chinese characters
+        // Sunday (1) to Saturday (7)
+        let chineseDaysOfWeek = [
+            1: "日", // Sunday
+            2: "一", // Monday
+            3: "二", // Tuesday
+            4: "三", // Wednesday
+            5: "四", // Thursday
+            6: "五", // Friday
+            7: "六"  // Saturday
+        ]
+        return #Predicate<ClassData> { $0.weekday == chineseDaysOfWeek[weekday] ?? "" }
+    }
+    
     var body: some View {
-        ScrollView {
-            LessonRightNow(lessonData: ClassSchedule[0])
+        
+        NavigationView{
+            List {
+                Section(header: Text("Today's Lesson")){
+                    LessonTodayView(ClassSchedule: ClassSchedule)
+                }
+            }
+            .navigationTitle("Summary")
         }
-        .safeAreaInset(edge: .top, spacing: 0) {
-            HeaderView()
-        }
-        .vSpacing(.top)
-        .padding()
     }
     
     @ViewBuilder

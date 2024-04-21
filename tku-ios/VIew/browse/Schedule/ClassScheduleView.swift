@@ -9,26 +9,25 @@ import SwiftUI
 import SwiftData
 
 struct ClassScheduleView: View {
-    @Query(filter: #Predicate<ClassData> { $0.weekday == "五" }, animation: .snappy) private var  ClassSchedule: [ClassData]
+    @Query private var  ClassSchedule: [ClassData]
     @State private var currentDate : Date = .init()
     @Environment(\.modelContext) private var modelContext
     //@State private var sampleData = SampleData
     var body: some View {
-        ScrollView (.vertical, showsIndicators: false){
-            ForEach(ClassSchedule) { classInfo in
-                LessonRightNow(lessonData: classInfo)
-                    .padding(.horizontal)
+        VStack {
+            HeaderView()
+            ScrollView (.vertical, showsIndicators: false){
+                ForEach(ClassSchedule) { classInfo in
+                    LessonRightNow(lessonData: classInfo)
+                        .padding(.horizontal)
+                }
             }
         }
-        .safeAreaInset(edge: .top, spacing: 0) {
-            HeaderView()
-        }
-        .vSpacing(.top)
     }
     
     @ViewBuilder
     func HeaderView() -> some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading) {
             HStack(spacing: 5) {
                 Text(currentDate.formatted(Date.FormatStyle().weekday(.wide)))
             }

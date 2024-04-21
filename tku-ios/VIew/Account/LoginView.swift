@@ -59,7 +59,7 @@ struct LoginView: View {
         webView.load(URLRequest(url: url))
 
         // Delay fetching cookies to give the web view time to load and process them.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { // 5 seconds delay for demonstration, adjust as necessary
+        DispatchQueue.main.asyncAfter(deadline: .now()) { // 5 seconds delay for demonstration, adjust as necessary
             webView.getCookies(for: url.host) { cookieDict in
                 self.cookies = cookieDict.values.compactMap { properties in
                     HTTPCookie(properties: properties as! [HTTPCookiePropertyKey: Any])
@@ -114,7 +114,6 @@ struct LoginView: View {
         makeAuthenticatedRequest(url: url, cookies: cookies) { htmlData in
             getStudentID(html: htmlData)
         }
-        print("id->")
     }
     
     func test() {

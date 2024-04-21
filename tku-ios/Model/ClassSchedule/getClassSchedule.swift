@@ -12,69 +12,69 @@ func getClassSchedule(html: String, modelContext: ModelContext){
         do {
             try modelContext.delete(model: ClassData.self)
         } catch {
-            print("Failed to clear all Country and City data.")
+            print("Failed to clear data.")
         }
         for num in stride(from: 0, to: 200, by: 1){
-            var s_name = ""
-            var s_time_string = ""
-            var s_classid = ""
-            var s_location = ""
-            var s_teacher = ""
-            for name in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[1]/p[1]") {
-                print ("className", name.text!)
-                s_name = name.text!
-            }
-            for timeString in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[1]/p[2]") {
-                print ("classtime", timeString.text!)
-                s_time_string = timeString.text!
-            }
-            for classID in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[2]/p[1]") {
-                print ("classID", classID.text!)
-                s_classid = classID.text!
-            }
-            for location in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[2]/p[2]/span[1]") {
-                print ("location", location.text!)
-                s_location = location.text!
-            }
-            for teacher in doc.xpath("/html/body/div[2]/div[2]/table/tbody/tr["+String(num)+"]/td[2]/p[2]/span[2]") {
-                print ("teacher", teacher.text!)
-                s_teacher = teacher.text!
+            guard let s_name = extractClassName(doc: doc, num: num),
+                  let s_time_string = extractClassTime(doc: doc, num: num),
+                  let s_classid = extractClassID(doc: doc, num: num),
+                  let s_location = extractLocation(doc: doc, num: num),
+                  let s_weekday = extractWeekday(doc: doc, num: num),
+                  let s_teacher = extractTeacher(doc: doc, num: num)else {
+                continue // Skip this iteration if any data is missing
             }
             
-            if (s_name != "") {
-                let newclassdata = ClassData(weekday: "", classNumber: "", startTime: s_time_string, EndTime: "", name: s_name, number: s_classid, location: s_location, teacher: s_teacher)
-                modelContext.insert(newclassdata)
-                print("add to database")
-            }
+            let newClassData = ClassData(weekday: s_weekday, classNumber: "", startTime: s_time_string, EndTime: "", name: s_name, number: s_classid, location: s_location, teacher: s_teacher)
+            modelContext.insert(newClassData)
+            print("Added to database")
         }
     }
 }
 
-func splitClassInfo(_ info: String) -> (weekday: String, lessonNumbers: String, timeRange: String)? {
-    // Define the regex pattern to match the specific parts of the string
-    let pattern = "\\((.+)\\) \\(([^)]+)\\) \\(([^)]+)\\)"
-    
-    do {
-        let regex = try NSRegularExpression(pattern: pattern)
-        let nsRange = NSRange(info.startIndex..., in: info)
-        
-        if let match = regex.firstMatch(in: info, options: [], range: nsRange) {
-            let weekdayRange = Range(match.range(at: 1), in: info)!
-            let lessonsRange = Range(match.range(at: 2), in: info)!
-            let timeRange = Range(match.range(at: 3), in: info)!
-            
-           
-            // Create strings from the extracted ranges
-            let weekday = String(info[weekdayRange]) // "五"
-            let lessons = String(info[lessonsRange]) // "06,07"
-            let lessonTime = String(info[timeRange]) // ":10 ~ :00"
-            return (weekday, lessons, lessonTime)
+func extractClassName(doc: HTMLDocument, num: Int) -> String? {
+    let xpath = "/html/body/div[2]/div[2]/table/tbody/tr[\(num)]/td[1]/p[1]"
+    return doc.at_xpath(xpath)?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+}
+
+func extractClassTime(doc: HTMLDocument, num: Int) -> String? {
+    let xpath = "/html/body/div[2]/div[2]/table/tbody/tr[\(num)]/td[1]/p[2]"
+    return doc.at_xpath(xpath)?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+}
+
+func extractWeekday(doc: HTMLDocument, num: Int) -> String? {
+    let xpath = "/html/body/div[2]/div[2]/table/tbody/tr[\(num)]/td[1]/p[2]"
+    if let rawTime = doc.at_xpath(xpath)?.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+        // Use a regular expression to extract characters inside the first parentheses
+        let regex = try? NSRegularExpression(pattern: "\\(([^)]+)\\)")
+        if let match = regex?.firstMatch(in: rawTime, options: [], range: NSRange(location: 0, length: rawTime.utf16.count)),
+            let range = Range(match.range(at: 1), in: rawTime) {
+            return String(rawTime[range])
         }
-    } catch {
-        print("Invalid regex: \(error.localizedDescription)")
     }
-    
     return nil
+}
+
+func extractClassID(doc: HTMLDocument, num: Int) -> String? {
+    let xpath = "/html/body/div[2]/div[2]/table/tbody/tr[\(num)]/td[2]/p[1]"
+    if let rawClassID = doc.at_xpath(xpath)?.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+        // Use a regular expression to remove non-numeric characters
+        let regex = try? NSRegularExpression(pattern: "\\d+")
+        if let match = regex?.firstMatch(in: rawClassID, options: [], range: NSRange(location: 0, length: rawClassID.utf16.count)),
+           let range = Range(match.range, in: rawClassID) {
+            return String(rawClassID[range])
+        }
+    }
+    return nil
+}
+
+func extractLocation(doc: HTMLDocument, num: Int) -> String? {
+    let xpath = "/html/body/div[2]/div[2]/table/tbody/tr[\(num)]/td[2]/p[2]/span[1]"
+    return doc.at_xpath(xpath)?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+}
+
+func extractTeacher(doc: HTMLDocument, num: Int) -> String? {
+    let xpath = "/html/body/div[2]/div[2]/table/tbody/tr[\(num)]/td[2]/p[2]/span[2]"
+    return doc.at_xpath(xpath)?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
 }
 
 /*

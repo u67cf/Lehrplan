@@ -25,6 +25,8 @@
 		188E1E922BB9A9C000E32D12 /* SampleDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E1E912BB9A9C000E32D12 /* SampleDeck.swift */; };
 		1895DCF92BB820E400A559E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895DCF82BB820E400A559E0 /* Date+Extensions.swift */; };
 		1895DCFB2BB8236D00A559E0 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895DCFA2BB8236D00A559E0 /* View+Extensions.swift */; };
+		18C7E8642BD54A1F00DE00DE /* LessonTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E8632BD54A1F00DE00DE /* LessonTodayView.swift */; };
+		18C7E8662BD5529400DE00DE /* ComputerRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7E8652BD5529400DE00DE /* ComputerRoomView.swift */; };
 		18C8C3C22BAACA4700CB94E2 /* getClassSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8C3C12BAACA4700CB94E2 /* getClassSchedule.swift */; };
 		18D6DFCA2BAA7A0B008DD13C /* tku_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6DFC92BAA7A0B008DD13C /* tku_iosApp.swift */; };
 		18D6DFCC2BAA7A0B008DD13C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D6DFCB2BAA7A0B008DD13C /* ContentView.swift */; };
@@ -50,6 +52,8 @@
 		188E1E912BB9A9C000E32D12 /* SampleDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDeck.swift; sourceTree = "<group>"; };
 		1895DCF82BB820E400A559E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		1895DCFA2BB8236D00A559E0 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		18C7E8632BD54A1F00DE00DE /* LessonTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTodayView.swift; sourceTree = "<group>"; };
+		18C7E8652BD5529400DE00DE /* ComputerRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerRoomView.swift; sourceTree = "<group>"; };
 		18C8C3C12BAACA4700CB94E2 /* getClassSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getClassSchedule.swift; sourceTree = "<group>"; };
 		18D6DFC62BAA7A0B008DD13C /* tku-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tku-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D6DFC92BAA7A0B008DD13C /* tku_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tku_iosApp.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		180331432BAAE11500A6BEE3 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				18C7E8632BD54A1F00DE00DE /* LessonTodayView.swift */,
+				18C7E8652BD5529400DE00DE /* ComputerRoomView.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 				187675D12BB8051900053FB2 /* ClassScheduleView.swift in Sources */,
 				18C8C3C22BAACA4700CB94E2 /* getClassSchedule.swift in Sources */,
 				18672EC82BB3E07900762AC5 /* PassView.swift in Sources */,
+				18C7E8642BD54A1F00DE00DE /* LessonTodayView.swift in Sources */,
 				1819D5872BB01DC90079B527 /* ClassData.swift in Sources */,
 				1875A0532BADD6BD00B3CD82 /* WebView.swift in Sources */,
 				1803313D2BAAD67A00A6BEE3 /* SummaryView.swift in Sources */,
@@ -316,6 +323,7 @@
 				18D6DFCC2BAA7A0B008DD13C /* ContentView.swift in Sources */,
 				180320072BBB062800898B7E /* PreviewSampleData.swift in Sources */,
 				1819D5852BB01B780079B527 /* isLogin.swift in Sources */,
+				18C7E8662BD5529400DE00DE /* ComputerRoomView.swift in Sources */,
 				18D6DFCA2BAA7A0B008DD13C /* tku_iosApp.swift in Sources */,
 				1819D58B2BB0222F0079B527 /* AccountView.swift in Sources */,
 				1875A0512BADD68800B3CD82 /* FetchClass.swift in Sources */,
