@@ -14,16 +14,12 @@ struct LessonTodayView: View {
 
     var body: some View {
         if ClassSchedule.count > 0 {
-            VStack {
+            VStack (spacing: 1){
                 ForEach(ClassSchedule) { classInfo in
                     LessonRightNow(lessonData: classInfo)
                         .padding(.horizontal)
                 }
             }
-            .safeAreaInset(edge: .top, spacing: 0) {
-                HeaderView()
-            }
-            .padding()
         } else {
             VStack {
                 Spacer()
@@ -37,24 +33,6 @@ struct LessonTodayView: View {
             }
             .frame(height: 100)
         }
-    }
-    
-    @ViewBuilder
-    func HeaderView() -> some View {
-        VStack(alignment: .trailing, spacing: 0) {
-            HStack(spacing: 0) {
-                Text(UserDefaults.standard.string(forKey: "studentID") ?? "YOUR STUDENT ID")
-                
-            }
-            .font(.title.bold())
-            Text(UserDefaults.standard.string(forKey: "lastUpdateTime") ?? "LAST TIME LOGIN")
-                .font(.callout)
-                .fontWeight(.semibold)
-                .textScale(.secondary)
-                .foregroundStyle(.gray)
-        }
-        .padding(.init(top: 0, leading: 15, bottom: 15, trailing: 15))
-        .hSpacing(.trailing)
     }
 }
 

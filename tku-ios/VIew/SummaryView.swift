@@ -35,6 +35,7 @@ struct SummaryView: View {
         
         NavigationView{
             List {
+                HeaderView()
                 Section(header: Text("Today's Lesson")){
                     LessonTodayView(ClassSchedule: ClassSchedule)
                 }
