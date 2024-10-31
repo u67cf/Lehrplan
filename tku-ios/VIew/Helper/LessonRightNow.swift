@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-
-import SwiftUI
+import SwiftData
 
 struct LessonRightNow: View {
     var lessonData: ClassData
